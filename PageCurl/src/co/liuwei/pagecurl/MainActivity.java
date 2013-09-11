@@ -8,6 +8,15 @@ import android.widget.Toast;
 import co.liuwei.pagecurl.view.OnPageCurChangelListener;
 import co.liuwei.pagecurl.view.PageCurlLayout;
 
+/**
+ * 描述：测试
+ * 
+ * 作者: Liu wei
+ * 
+ * 邮箱：i@liuwei.co
+ * 
+ * 创建时间: 2013-9-9
+ */
 public class MainActivity extends Activity implements OnPageCurChangelListener {
 
 	private PageCurlLayout pageCurlLayout;
@@ -19,8 +28,7 @@ public class MainActivity extends Activity implements OnPageCurChangelListener {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		page1 = getLayoutInflater().inflate(R.layout.main_menu_hidden,
-				null);
+		page1 = getLayoutInflater().inflate(R.layout.main_menu_hidden, null);
 
 		page2 = getLayoutInflater().inflate(R.layout.main_menu_show, null);
 
@@ -48,5 +56,5 @@ public class MainActivity extends Activity implements OnPageCurChangelListener {
 	public void onPageOpened() {
 		Toast.makeText(this, "Page Opened", Toast.LENGTH_SHORT).show();
 	}
-	
+
 }

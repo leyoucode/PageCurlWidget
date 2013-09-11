@@ -26,14 +26,14 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
-/** 
+/**
  * 描述：翻页控件
- *
+ * 
  * 作者: Liu wei
  * 
  * 邮箱：i@liuwei.co
  * 
- * 创建时间: 2013-9-10
+ * 创建时间: 2013-9-9
  */
 public class PageCurlLayout extends FrameLayout {
 
@@ -194,7 +194,7 @@ public class PageCurlLayout extends FrameLayout {
 			closedPage.setLayoutParams(new LayoutParams(contentWidth,
 					contentHeight));
 			mainLayout.addView(closedPage);
-			
+
 			opendedPage.setLayoutParams(new LayoutParams(contentWidth,
 					contentHeight));
 			invisibleLayout.addView(opendedPage);
@@ -203,7 +203,7 @@ public class PageCurlLayout extends FrameLayout {
 			opendedPage.setLayoutParams(new LayoutParams(contentWidth,
 					contentHeight));
 			mainLayout.addView(opendedPage);
-			
+
 			closedPage.setLayoutParams(new LayoutParams(contentWidth,
 					contentHeight));
 			invisibleLayout.addView(closedPage);
@@ -223,8 +223,9 @@ public class PageCurlLayout extends FrameLayout {
 
 	OnTouchListener touchListener = new OnTouchListener() {
 		public boolean onTouch(View v, MotionEvent event) {
-			Log.d(LOG_TAG, "onTouch " + " x: " + event.getX() + " y: "
-					+ event.getY() + " mState:" + mState);
+			Log.d(LOG_TAG,
+					"onTouch " + " x: " + event.getX() + " y: " + event.getY()
+							+ " mState:" + mState);
 			mGestureDetector.onTouchEvent(event);
 
 			int action = event.getAction();
@@ -249,12 +250,10 @@ public class PageCurlLayout extends FrameLayout {
 								aniStartPos = new Point((int) scrollX,
 										(int) scrollY);
 								if (scrollY < contentHeight / 2) {
-									aniStopPos = new Point(
-											(int) SCROLL_MIN_X,
+									aniStopPos = new Point((int) SCROLL_MIN_X,
 											(int) SCROLL_MIN_Y);
 								} else {
-									aniStopPos = new Point(
-											(int) SCROLL_MAX_X,
+									aniStopPos = new Point((int) SCROLL_MAX_X,
 											(int) SCROLL_MAX_Y);
 								}
 								aniTime = ANIMATION_TIME;
@@ -263,7 +262,7 @@ public class PageCurlLayout extends FrameLayout {
 								mBookView.startAnimation();
 							}
 						}
-					
+
 					}
 				} else if (mPageState == PageState.OPENED) {
 					aniStopPos = new Point((int) SCROLL_MAX_X,

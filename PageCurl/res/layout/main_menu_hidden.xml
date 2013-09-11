@@ -6,12 +6,12 @@
 
     <TextView
         android:id="@+id/text1"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="第一页"
-		android:textColor="@color/black"
-		android:textSize="24sp"
-		android:textStyle="bold"
-		android:layout_centerInParent="true"/>
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="第一页"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

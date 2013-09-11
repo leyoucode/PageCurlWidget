@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="pink">#ffc0cb</color> <!-- 粉红色 -->
     <color name="lightpink">#ffb6c1</color> <!-- 亮粉红色 -->
     <color name="white">#ffffff</color> <!-- 白色 -->
@@ -147,7 +148,8 @@
     <color name="plum">#dda0dd</color> <!-- 洋李色 -->
     <color name="gainsboro">#dcdcdc</color> <!-- 淡灰色 -->
     <!-- 透明 -->
-	<color name="transparent">#00000000</color>
-	<!-- 半透明 -->
-	<color name="half_transparent">#e0000000</color>
+    <color name="transparent">#00000000</color>
+    <!-- 半透明 -->
+    <color name="half_transparent">#e0000000</color>
+
 </resources>
