@@ -26,6 +26,15 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+/** 
+ * 描述：翻页控件
+ *
+ * 作者: Liu wei
+ * 
+ * 邮箱：i@liuwei.co
+ * 
+ * 创建时间: 2013-9-10
+ */
 public class PageCurlLayout extends FrameLayout {
 
 	public static final String LOG_TAG = "PageCurlLayout";
@@ -181,12 +190,11 @@ public class PageCurlLayout extends FrameLayout {
 		invisibleLayout.removeAllViews();
 		mainLayout.removeAllViews();
 
-		/* Current Page */
 		if (mPageState == PageState.CLOSED) {
 			closedPage.setLayoutParams(new LayoutParams(contentWidth,
 					contentHeight));
 			mainLayout.addView(closedPage);
-			/* Next Page */
+			
 			opendedPage.setLayoutParams(new LayoutParams(contentWidth,
 					contentHeight));
 			invisibleLayout.addView(opendedPage);
@@ -195,13 +203,12 @@ public class PageCurlLayout extends FrameLayout {
 			opendedPage.setLayoutParams(new LayoutParams(contentWidth,
 					contentHeight));
 			mainLayout.addView(opendedPage);
-			/* Previous page */
+			
 			closedPage.setLayoutParams(new LayoutParams(contentWidth,
 					contentHeight));
 			invisibleLayout.addView(closedPage);
 		}
 
-		/* Background Page */
 		if (backgroundPage == null) {
 			backgroundPage = new WhiteView(mContext);
 		}
@@ -799,6 +806,9 @@ public class PageCurlLayout extends FrameLayout {
 		}
 	}
 
+	/**
+	 * 计算动画数据
+	 */
 	public void getAnimateData() {
 		Log.d(LOG_TAG, "getAnimateData");
 		long time = aniTime;
